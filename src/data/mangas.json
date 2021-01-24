@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "name": "Kaguya-sama wa Kokurasetai",
+    "url_tag": "kaguya_sama",
+    "cover_page": "/images/cover_pages/1.png",
+    "chapters": [
+      {
+        "number": 214,
+        "cover": "/images/1/214/01.png",
+        "url": "/kaguya_sama/214"
+      }
+    ]
+  }
+]
