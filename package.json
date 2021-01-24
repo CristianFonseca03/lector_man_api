@@ -23,9 +23,7 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "helmet": "^4.4.1"
-  },
-  "devDependencies": {
+    "helmet": "^4.4.1",
     "@types/cors": "^2.8.9",
     "@types/express": "^4.17.11",
     "@types/fs-extra": "^9.0.6",
