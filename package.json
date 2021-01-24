@@ -6,15 +6,16 @@
   "scripts": {
     "clean": "rimraf dist/*",
     "copy-assets": "ts-node tools/copyAssets",
+    "remove-assets": "ts-node tools/removeSrcAssets",
     "lint": "tslint -c tslint.json -p tsconfig.json --fix",
     "tsc": "tsc",
-    "build": "npm-run-all clean lint tsc copy-assets",
+    "build": "npm-run-all clean tsc copy-assets",
+    "build:production": "npm-run-all clean tsc copy-assets remove-assets",
     "dev:start": "npm-run-all build start",
     "dev": "nodemon --watch src -e ts,ejs --exec npm run dev:start",
     "start:app": "node .",
-    "start": "npm-run-all build start:app",
-    "web": "npm-run-all build start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm-run-all build:production start:app",
+    "web": "npm-run-all build start"
   },
   "keywords": [],
   "author": "@cristianfonseca03",
@@ -30,7 +31,6 @@
     "@types/node": "^14.14.22",
     "@types/shelljs": "^0.8.8",
     "fs-extra": "^9.1.0",
-    "nodemon": "^2.0.7",
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2",
     "shelljs": "^0.8.4",
@@ -38,6 +38,9 @@
     "ts-node": "^9.1.1",
     "tslint": "^6.1.3",
     "typescript": "^4.1.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   },
   "engines": {
     "node": "14.15.4"
