@@ -11,7 +11,7 @@
     "tsc": "tsc",
     "build": "npm-run-all clean tsc copy-assets",
     "build:production": "npm-run-all clean tsc copy-assets remove-assets",
-    "dev:start": "npm-run-all build start",
+    "dev:start": "npm-run-all build start:app",
     "dev": "nodemon --watch src -e ts,ejs --exec npm run dev:start",
     "start:app": "node .",
     "start": "npm-run-all build:production start:app",
